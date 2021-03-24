@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Form-task</title>
+
+</head>
+
+<body>
+
+  <form action="#" class="form">
+    <div id="message">
+      <p class="message_item">a lower case</p>
+      <p class="message_item">an upper case</p>
+      <p class="message_item">an number</p>
+      <p class="message_item">minimum 8 characters</p>
+    </div>
+    <h1 class="form_header">Create Account</h1>
+    <p class="form_text">it's free and hardly takes more than 30 seconds</p>
+
+    <div class="form_group">
+      <i class="fas fa-user form_icon"></i>
+      <input type="text" id="name" style="text-align: center;" name="username" placeholder="Username (minimum 7 characters)" class="form_input"
+        required minlength=" 7"><span id='nameverify'></span>
+    </div>
+    <div class="form_group">
+      <i class="fas fa-envelope form_icon"></i>
+      <input type="email" id="email" style="text-align: center;" name="email" placeholder="Email (example@mail.com)" class="form_input"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required> <span id='emailverify'></span>
+    </div>
+    <div class="form_group">
+      <i class="fas fa-lock form_icon"></i>
+      <input type="password" name="password" style="text-align: center;" placeholder="Password" required minlength="8" id="password"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form_input"> <span class="password_eye"><i id="hide1"
+          class="fas fa-eye-slash form_icon"></i><i id="hide2" class="fas fa-eye form_icon"></i></span><span
+        id='passverify'></span>
+    </div>
+    <div class="form_group">
+      <i class="fas fa-lock form_icon"></i>
+      <input type="password" name="confirm_password" style="text-align: center;" placeholder="Password Confirm" required minlength="8"
+        id="confirm_password" class="form_input"> <span id='confirmverify'></span>
+    </div>
+    <button class="form_submit">Sign Up</button>
+    <p class="form_text">by clicking on the sign up button, you agree to our <span class="span">terms &
+        conditions</span>, and <span class="span">privacy policy</span>.</p>
+  </form>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+</body>
+
+</html>
